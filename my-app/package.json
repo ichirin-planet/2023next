@@ -6,8 +6,11 @@
     "prepare": "panda codegen",
     "dev": "next dev",
     "build": "next build",
+    "prod": "yarn prepare && yarn next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "yarn lint --fix",
+    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'"
   },
   "dependencies": {
     "@types/node": "20.4.5",
@@ -25,7 +28,7 @@
     "@pandacss/dev": "^0.9.0",
     "@typescript-eslint/eslint-plugin": "^6.2.1",
     "@typescript-eslint/parser": "^6.2.1",
-    "eslint-config-prettier": "^8.9.0",
-    "prettier": "^3.0.0"
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.2"
   }
 }
